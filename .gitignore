@@ -22,6 +22,5 @@ src/main/Corpus.java
 src/main/Model.java
 src/main/Vectorizer.java
 
-out/production/LDA/com/
-out/production/LDA/main/
-!/src/clda.properties
+out/
+

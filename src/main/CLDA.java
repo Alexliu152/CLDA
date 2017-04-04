@@ -301,12 +301,10 @@ public class CLDA implements CLDAModel {
 
     // <editor-fold desc="Dense Vector String">
     StringBuilder stringBuilder1 = new StringBuilder();
-    stringBuilder1.append(String.valueOf(0) + " ");
+    stringBuilder1.append(String.valueOf(0)).append(" ");
     int index2 = 1;
     for (String number : featureStringVector) {
-      stringBuilder1.append(String.valueOf(index2) + ":"
-          + String.valueOf(((java.lang.Double) java.lang.Double.parseDouble(number)).intValue())
-          + " ");
+      stringBuilder1.append(String.valueOf(index2)).append(":").append(String.valueOf(((Double) Double.parseDouble(number)).intValue())).append(" ");
       index2++;
     }
     // </editor-fold>
@@ -318,7 +316,9 @@ public class CLDA implements CLDAModel {
       e.printStackTrace();
     }
     try {
-      fileOutputStream.write(vector.getBytes());
+        if (fileOutputStream != null) {
+            fileOutputStream.write(vector.getBytes());
+        }
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -392,7 +392,9 @@ public class CLDA implements CLDAModel {
       e.printStackTrace();
     }
     try {
-      in.writeObject(vocabulary);
+        if (in != null) {
+            in.writeObject(vocabulary);
+        }
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -418,12 +420,10 @@ public class CLDA implements CLDAModel {
 
       // <editor-fold desc="Dense Vector String">
       StringBuilder stringBuilder1 = new StringBuilder();
-      stringBuilder1.append(String.valueOf(0) + " ");
+      stringBuilder1.append(String.valueOf(0)).append(" ");
       int index2 = 1;
       for (String number : featureStringVector) {
-        stringBuilder1.append(String.valueOf(index2) + ":"
-            + String.valueOf(((java.lang.Double) java.lang.Double.parseDouble(number)).intValue())
-            + " ");
+        stringBuilder1.append(String.valueOf(index2)).append(":").append(String.valueOf(((Double) Double.parseDouble(number)).intValue())).append(" ");
         index2++;
       }
       // </editor-fold>
@@ -504,9 +504,8 @@ public class CLDA implements CLDAModel {
     int indexMax = 0;
     double maxValue = 0.0;
     for (int i = 0; i < indexString.length; i++) {
-      if (((java.lang.Double) java.lang.Double.parseDouble(indexString[i]))
-          .doubleValue() > maxValue) {
-        maxValue = ((java.lang.Double) java.lang.Double.parseDouble(indexString[i])).doubleValue();
+      if ((Double) Double.parseDouble(indexString[i]) > maxValue) {
+        maxValue = (Double) Double.parseDouble(indexString[i]);
         indexMax = i;
       }
     }

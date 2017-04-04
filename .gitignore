@@ -10,3 +10,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.idea
+
+data/corpus/resource/*
+data/corpus/output/*.txt
+
+spark-warehouse/
+
+src/main/Corpus.java
+src/main/Model.java
+src/main/Vectorizer.java
+
+out/production/LDA/com/
+out/production/LDA/main/

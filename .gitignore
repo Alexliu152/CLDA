@@ -24,3 +24,4 @@ src/main/Vectorizer.java
 
 out/production/LDA/com/
 out/production/LDA/main/
+!/src/clda.properties

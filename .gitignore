@@ -24,3 +24,7 @@ src/main/Vectorizer.java
 
 out/
 
+/src/main/Test.java
+/target/
+data/corpus/output/
+target/

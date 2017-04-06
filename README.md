@@ -1,2 +1,2 @@
 # CLDA
-This is a Javaimplementation of Chinese LDA model using Spark
+This is a Java implementation of Chinese LDA model using Spark
